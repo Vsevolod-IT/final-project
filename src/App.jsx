@@ -15,7 +15,7 @@ function App() {
              <Route path="/" exact component={PageAllPokemons} />
              <Route path="/Catch" exact component={PageCatchedPokemons} />
              <Route path="/Pokemon/:pokemonId" exact component={PagePokemon} />
-             <Route component={NotFound} />
+             {/* <Route component={NotFound} /> */}
            </Switch>
        </Router>
      </div>
