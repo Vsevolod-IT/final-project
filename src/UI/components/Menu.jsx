@@ -1,15 +1,30 @@
 import React from "react";
+import { BrowserRouter as Router, Link,Route} from 'react-router-dom';
+
+import 'bootstrap/dist/css/bootstrap.css'
+import { Nav, Navbar, NavDropdown } from 'react-bootstrap'
 
 const Menu = () => {
    return (
       <>
 
-<ul id="dropdown2" className="dropdown-content">
-    <li><a href="#!">one<span className="badge">1</span></a></li>
-    <li><a href="#!">two<span className="new badge">1</span></a></li>
-    <li><a href="#!">three</a></li>
-  </ul>
-  <a className="btn dropdown-trigger" href="#!" data-target="dropdown2">Dropdown<i className="material-icons right">arrow_drop_down</i></a>
+<Navbar bg="dark" variant="dark"
+        sticky="top" expand="sm" collapseOnSelect>
+        <Navbar.Brand>
+          Pokedex
+        </Navbar.Brand>
+        <Navbar.Toggle className="coloring" />
+        <Navbar.Collapse>
+          <Nav>
+            <NavDropdown title="Pages">
+              <NavDropdown.Item><Link to="/Catch">catch pokemons</Link></NavDropdown.Item>
+              <NavDropdown.Divider />
+              <NavDropdown.Item><Link to="/">All pokemons</Link></NavDropdown.Item>
+            </NavDropdown>
+          </Nav>
+        </Navbar.Collapse>
+
+      </Navbar>
       </>
    )
 }
