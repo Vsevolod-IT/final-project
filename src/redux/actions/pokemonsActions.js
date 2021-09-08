@@ -8,8 +8,10 @@ export const loadPokemons = () => async (dispatch) => {
 }
 
 export const fetchPokemons = (page) => async (dispatch) => {
+   console.log(page)
    const response = await apiAxios.getPokemons(page);
-   dispatch({type: ActionTypes.FETCH_POKEMONS, payload: response.data});
+   console.log('pokem actions - ',response)
+   dispatch({type: ActionTypes.FETCH_POKEMONS, payload: response});
 }
 
 export const fetchPokemon = (id) => async (dispatch) => {

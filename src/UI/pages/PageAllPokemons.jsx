@@ -1,12 +1,18 @@
 import React, { useEffect, useState } from "react";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { fetchPokemons, loadPokemons } from "../../redux/actions/pokemonsActions";
+import CardPokemon from "../components/CardPokemon";
+import Container from 'react-bootstrap/Container';
+import { Grid, Row, Col } from "react-bootstrap";
 
 const PageAllPokemons = () => {
 
    const [fetch, setFetch] = useState(false);
    const [currentPage, setCurrent] = useState(2);
    const dispatch = useDispatch();
+
+   const pokemons = useSelector((state) => state.Pokemons.pokemons)
+
 
    useEffect(() => {
       dispatch(loadPokemons()); 
@@ -37,9 +43,13 @@ const PageAllPokemons = () => {
 
    return(
       <main>
-         <div className="container">
-        
-         </div>
+        <Container>
+           <Row className="justify-content-md-center">
+        {pokemons.map(pokemon => 
+           <CardPokemon id={pokemon.id} name={pokemon.name}/>
+        )}
+        </Row>
+        </Container>
       </main>
    )
 };

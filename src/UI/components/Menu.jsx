@@ -17,7 +17,7 @@ const Menu = () => {
         <Navbar.Collapse>
           <Nav>
             <NavDropdown title="Pages">
-              <NavDropdown.Item><Link to="/Catch">catch pokemons</Link></NavDropdown.Item>
+              <NavDropdown.Item ><Link to="/Catch">catch pokemons</Link></NavDropdown.Item>
               <NavDropdown.Divider />
               <NavDropdown.Item><Link to="/">All pokemons</Link></NavDropdown.Item>
             </NavDropdown>
@@ -30,3 +30,4 @@ const Menu = () => {
 }
 
 export default Menu;
+
