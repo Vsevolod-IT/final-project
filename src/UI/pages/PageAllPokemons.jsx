@@ -14,6 +14,7 @@ const PageAllPokemons = () => {
 
    const scrollHandler = (e) => {
       if(e.target.documentElement.scrollHeight - (e.target.documentElement.scrollTop + window.innerHeight)< 100) {
+         console.log('scroll')
          setFetch(true)
       }
    };
@@ -33,10 +34,12 @@ const PageAllPokemons = () => {
          setFetch(false)
       } 
    }, [fetch]);
-   
+
    return(
       <main>
-         PageAllPokemons
+         <div className="container">
+        
+         </div>
       </main>
    )
 };
