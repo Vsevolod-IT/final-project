@@ -6,7 +6,6 @@ import { Card } from "react-bootstrap";
 
 
 const CardPokemon = (props) => {
-  console.log(props)
    return (
       <Card style={{ width: '18rem' }} key={props.id}>
         <Link to={`/pokemon/${props.id}`}>

@@ -11,14 +11,18 @@ const PageCatchedPokemons = () => {
    return(
       <main>
         <Container>
-           <Row className="justify-content-md-center">
+            { pokemons.length ? (
+            <Row className="justify-content-md-center">
             {pokemons.map(pokemon => 
             <>
            <CardPokemon key={pokemon.id} id={pokemon.id} name={pokemon.name} data={pokemon.data} btnFree={true}/>
            </>
-        )}
-        </Row>
-        </Container>
+            )}
+            </Row>
+            ) : (
+            <h2>No Pokemons</h2> 
+            )}
+         </Container>
       </main>
    )
 };
