@@ -1,5 +1,5 @@
 import React, {useEffect} from "react";
-import { Card, Button } from "react-bootstrap";
+import { Button } from "react-bootstrap";
 import { useParams, useHistory } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchPokemon, removeSelectPokemon } from "../../redux/actions/pokemonsActions";
