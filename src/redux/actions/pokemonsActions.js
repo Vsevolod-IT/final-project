@@ -22,3 +22,10 @@ export const removeSelectPokemon = () => {
       type: ActionTypes.REMOVE_SELECTED_POKEMON,
    };
 };
+
+export const catchPokemon = (pokemon) => {
+   return {
+      type: ActionTypes.CACTCH_POKEMON,
+      payload: pokemon,
+   };
+};
