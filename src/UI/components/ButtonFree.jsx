@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { freePokemon } from "../../redux/actions/pokemonsActions";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 import { Button } from "react-bootstrap";
 
 const ButtonFree = (props) => {

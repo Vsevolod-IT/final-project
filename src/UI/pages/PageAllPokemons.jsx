@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchPokemons, loadPokemons } from "../../redux/actions/pokemonsActions";
 import CardPokemon from "../components/CardPokemon";
-import Container from 'react-bootstrap/Container';
+import Container from "react-bootstrap/Container";
 import { Row } from "react-bootstrap";
 
 const PageAllPokemons = () => {
@@ -43,10 +43,10 @@ const PageAllPokemons = () => {
       <main>
         <Container>
            <Row className="justify-content-md-center">
-        {pokemons.map(pokemon => 
-           <CardPokemon key={pokemon.id} id={pokemon.id} name={pokemon.name}/>
-        )}
-        </Row>
+               {pokemons.map(pokemon => 
+                  <CardPokemon key={pokemon.id} id={pokemon.id} name={pokemon.name}/>
+               )}
+            </Row>
         </Container>
       </main>
    )

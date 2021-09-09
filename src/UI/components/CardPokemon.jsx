@@ -9,11 +9,11 @@ const CardPokemon = (props) => {
    return (
       <Card style={{ width: '18rem' }} key={props.id}>
         <Link to={`/pokemon/${props.id}`}>
-        <Card.Img variant="top" src={`/pokemons/${props.id}.png`}/>
+          <Card.Img variant="top" src={`/pokemons/${props.id}.png`}/>
         </Link>
         { props.btnFree &&
             <ButtonFree id={props.id}/>
-          }
+        }
         <Card.Body>
           <Card.Title>{props.name}</Card.Title>
           { props.data &&

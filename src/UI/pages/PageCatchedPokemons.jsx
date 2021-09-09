@@ -1,6 +1,6 @@
-import React, { useEffect, useState } from "react";
-import { useDispatch, useSelector } from "react-redux";
-import ButtonFree from "../components/ButtonFree";
+import React from "react";
+import { useSelector } from "react-redux";
+
 
 import CardPokemon from "../components/CardPokemon";
 import Container from 'react-bootstrap/Container';

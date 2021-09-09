@@ -1,14 +1,13 @@
 import React from "react";
-import { BrowserRouter as Router, Link,Route} from 'react-router-dom';
+import { BrowserRouter as Router, Link,Route} from "react-router-dom";
 
-import 'bootstrap/dist/css/bootstrap.css'
-import { Nav, Navbar, NavDropdown } from 'react-bootstrap'
+import "bootstrap/dist/css/bootstrap.css";
+import { Nav, Navbar, NavDropdown } from "react-bootstrap";
 
 const Menu = () => {
    return (
       <>
-
-<Navbar bg="dark" variant="dark"
+      <Navbar bg="dark" variant="dark"
         sticky="top" expand="sm" collapseOnSelect>
         <Navbar.Brand>
           Pokedex
