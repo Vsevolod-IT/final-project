@@ -7,12 +7,8 @@ const statePokemons = {
 export const pokemonsReducer = (state=statePokemons, {type, payload}, ) => {
    switch (type) {
       case ActionTypes.LOAD_FETCH_POKEMONS:
-         console.log('state load',state)
-         console.log('payload load',payload)
          return {...state, pokemons:payload};
       case ActionTypes.FETCH_POKEMONS:
-         console.log('state fetch',state)
-         console.log('payload fetch',payload)
          return {...state, pokemons:[...state.pokemons, ...payload]};
       default:
           return state;

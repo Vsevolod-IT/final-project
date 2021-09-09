@@ -8,13 +8,17 @@ export const loadPokemons = () => async (dispatch) => {
 }
 
 export const fetchPokemons = (page) => async (dispatch) => {
-   console.log(page)
    const response = await apiAxios.getPokemons(page);
-   console.log('pokem actions - ',response)
    dispatch({type: ActionTypes.FETCH_POKEMONS, payload: response});
 }
 
 export const fetchPokemon = (id) => async (dispatch) => {
    const response = await apiAxios.getPokemon(id);
-   dispatch({type: ActionTypes.SELECT_POKEMON, payload: response.data,});
+   dispatch({type: ActionTypes.SELECT_POKEMON, payload: response});
 }
+
+export const removeSelectPokemon = () => {
+   return {
+      type: ActionTypes.REMOVE_SELECTED_POKEMON,
+   };
+};

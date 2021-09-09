@@ -3,14 +3,13 @@ import { useDispatch, useSelector } from "react-redux";
 import { fetchPokemons, loadPokemons } from "../../redux/actions/pokemonsActions";
 import CardPokemon from "../components/CardPokemon";
 import Container from 'react-bootstrap/Container';
-import { Grid, Row, Col } from "react-bootstrap";
+import { Row } from "react-bootstrap";
 
 const PageAllPokemons = () => {
 
    const [fetch, setFetch] = useState(false);
    const [currentPage, setCurrent] = useState(2);
    const dispatch = useDispatch();
-
    const pokemons = useSelector((state) => state.Pokemons.pokemons)
 
 
@@ -20,7 +19,6 @@ const PageAllPokemons = () => {
 
    const scrollHandler = (e) => {
       if(e.target.documentElement.scrollHeight - (e.target.documentElement.scrollTop + window.innerHeight)< 100) {
-         console.log('scroll')
          setFetch(true)
       }
    };
