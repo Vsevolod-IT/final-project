@@ -44,7 +44,7 @@ const PageAllPokemons = () => {
         <Container>
            <Row className="justify-content-md-center">
         {pokemons.map(pokemon => 
-           <CardPokemon id={pokemon.id} name={pokemon.name}/>
+           <CardPokemon key={pokemon.id} id={pokemon.id} name={pokemon.name}/>
         )}
         </Row>
         </Container>
