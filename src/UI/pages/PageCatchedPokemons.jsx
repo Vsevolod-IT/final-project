@@ -6,7 +6,7 @@ import Container from 'react-bootstrap/Container';
 import { Row } from "react-bootstrap";
 
 const PageCatchedPokemons = () => {
-   const pokemons = useSelector((state) => state.catchPokemons.catchPokemons)
+   const pokemons = useSelector((state) => state.catchPokemons.catchPokemons);
    return(
       <main>
         <Container>

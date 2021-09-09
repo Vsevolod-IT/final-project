@@ -3,6 +3,7 @@ import { Card, Button } from "react-bootstrap";
 import { useParams, useHistory } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchPokemon, removeSelectPokemon } from "../../redux/actions/pokemonsActions";
+import CardPokemon from "../components/CardPokemon";
 
 const PagePokemon = () => {
    const {pokemonId} = useParams();
@@ -15,18 +16,14 @@ const PagePokemon = () => {
       return () => {
          dispatch(removeSelectPokemon())
       }
-   }, [pokemonId])
+   }, [pokemonId]);
+
+   console.log(pokemon)
    
    return(
       <main className="container">
-         <Card style={{ width: '20rem' }}>
-            <Button variant="primary" onClick={() =>  history.goBack()}>back to page</Button>
-            <Card.Img variant="top" src={`/pokemons/${pokemonId}.png`}/>
-            <Card.Body>
-               <Card.Title>non</Card.Title>
-               <Button variant="primary">catch</Button>
-            </Card.Body>
-         </Card>  
+         <Button variant="primary" onClick={() =>  history.goBack()}>back to page</Button>
+         <CardPokemon id={pokemon.id} name={pokemon.name}/>
       </main>
    )
 };
