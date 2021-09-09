@@ -7,12 +7,13 @@ import { Row } from "react-bootstrap";
 
 const PageCatchedPokemons = () => {
    const pokemons = useSelector((state) => state.catchPokemons.catchPokemons);
+   console.log(pokemons)
    return(
       <main>
         <Container>
            <Row className="justify-content-md-center">
             {pokemons.map(pokemon => 
-           <CardPokemon key={pokemon.id} id={pokemon.id} name={pokemon.name}/>
+           <CardPokemon key={pokemon.id} id={pokemon.id} name={pokemon.name} data={pokemon.data}/>
         )}
         </Row>
         </Container>

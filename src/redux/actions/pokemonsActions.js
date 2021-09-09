@@ -24,8 +24,10 @@ export const removeSelectPokemon = () => {
 };
 
 export const catchPokemon = (pokemon) => {
+   const data = new Date().toLocaleDateString();
+   const pokemonData = {...pokemon, data}
    return {
       type: ActionTypes.CACTCH_POKEMON,
-      payload: pokemon,
+      payload: pokemonData
    };
 };

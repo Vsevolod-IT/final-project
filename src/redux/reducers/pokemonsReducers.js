@@ -35,7 +35,7 @@ export const catchPokemonsReducer = (state=stateCatch, {type, payload}, ) => {
    switch (type) {
       case ActionTypes.CACTCH_POKEMON:
          return {...state, catchPokemons:[...state.catchPokemons, payload], id:[...state.id, payload.id]}
-      case ActionTypes.CACTCH_POKEMON:
+      case ActionTypes.FREE_POKEMON:
          return {...state, catchPokemons: state.pokemons.filter(p => p.id !== payload.id)};
       default:
           return state;
