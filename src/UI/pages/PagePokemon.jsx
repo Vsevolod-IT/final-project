@@ -17,9 +17,7 @@ const PagePokemon = () => {
          dispatch(removeSelectPokemon())
       }
    }, [pokemonId]);
-
-   console.log(pokemon)
-   
+ 
    return(
       <main className="container">
          <Button variant="primary" onClick={() =>  history.goBack()}>back to page</Button>
